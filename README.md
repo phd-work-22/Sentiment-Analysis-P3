@@ -1,4 +1,4 @@
-# Sentiment-Analysis-P3
+# Title: Charaterising developer sentiment in software components: a case study of Gentoo
 
 Following is the steps of conducting our work based on the paper titled: Charaterising developer sentiment in software components.
 
@@ -15,7 +15,9 @@ Script used: **BugzillaJSONToCSV2.py** --  the completed results of the mailing 
 
 
 2. Preprocessing the data
+   
 2.1 Normalisation of data
+
 2.2 Preprocessing component filepath
 
 
