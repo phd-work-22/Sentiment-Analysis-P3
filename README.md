@@ -3,28 +3,33 @@
 Following is the steps of conducting our work based on the paper titled: Charaterising developer sentiment in software components.
 
 1. Extracting Mailing Lists and Commits data
+   
 1.1. Extracting Mailing Lists of Gentoo.
 The mailing lists retrieved from the archives of the Gentoo mailing lists shared in the following link: https://archives.gentoo.org/gentoo-dev/
-
-Script used: **GentooMonthlyMessagesScapperMod2.py** -- the completed results of the mailing list archives can be seen on a file named '_completed mailingl list.rar_' accessed in the link mentioned at the end of this file.
 
 1.2. Extracting Gentoo (Bugzilla) Commits data
 The bugzilla report containing commits data retrieced from the repository in the following links: https://gitweb.gentoo.org/repo/gentoo/historical.git/; https://github.com/gentoo/gentoo.git
 
-Script used: **BugzillaJSONToCSV2.py** --  the completed results of the mailing list archives can be seen on a file named '_**bugzillaCSV.csv**_' accessed in the link mentioned at the end of this file.
-
 
 2. Preprocessing the data
-   
-2.1 Normalisation of data
 
+2.1 Normalisation of mailing list data
+ In this phase, we cleaned up the content of the message body. We removed lines prefixed by the character ‘\textgreater’, URLs, name(s) or signatures, greetings (i.e. "Kind Regards", and "Best Regards"). In addition, we removed lines containing code syntax and/or HTML/XML tags. 
+ 
 2.2 Preprocessing component filepath
+In this phase, we shortened the name of the component file path for each commit to extract 'head path' and 'path grain'
 
+3. Identifying sentiment in the mailing list
+We employed Sentistrength-SE to label each sentence of each message in the mailing list. The available SentiStrength can be found via this link: https://drive.google.com/drive/folders/1fyiqgrh_mP28uZJNIzAoMsAX3DWMa3RO
 
-   
-4. 
-All completed files can be accessed through this link:
-https://drive.google.com/drive/folders/1fyiqgrh_mP28uZJNIzAoMsAX3DWMa3RO?usp=sharing
+5. Aggregating, linking, and visualising data for analysis
+4.1. Aggregating datasets of mailing data and commits
+   We aggregated the number of positive and negative scores of all messages by year.
+   We aggregated the number of commits done by each developers by time(month, year), author.
+
+4.2 Linking and visualising data
+
+All datasets are available by request.
 
 
 
