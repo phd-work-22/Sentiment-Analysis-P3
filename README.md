@@ -14,7 +14,7 @@ The bugzilla report containing commits data retrieced from the repository in the
 2. Preprocessing the data
 
 2.1 Normalisation of mailing list data
- In this phase, we cleaned up the content of the message body. We removed lines prefixed by the character ‘\textgreater’, URLs, name(s) or signatures, greetings (i.e. "Kind Regards", and "Best Regards"). In addition, we removed lines containing code syntax and/or HTML/XML tags. 
+In this phase, we cleaned up the content of the message body. We removed lines prefixed by the character '\textgreater’, URLs, name(s) or signatures, greetings (i.e. "Kind Regards", and "Best Regards"). In addition, we removed lines containing code syntax and/or HTML/XML tags. 
  
 2.2 Preprocessing component filepath
 In this phase, we shortened the name of the component file path for each commit to extract 'head path' and 'path grain'
