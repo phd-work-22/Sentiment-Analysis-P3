@@ -20,7 +20,7 @@ public class ExecuteSentistrengthSE {
         // Read the files
         // File path is passed as parameter
         String[] params = new String [1];
-        params[0] = "/home/p306654/Documents/SEfiles/sentistrength.sh";
+        params[0] = "filepathname/sentistrength.sh";
         Runtime.getRuntime().exec(params);
     }  
 }  
