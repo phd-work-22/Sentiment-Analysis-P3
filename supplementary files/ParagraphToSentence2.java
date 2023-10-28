@@ -1,11 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-/**
- *
- * @author p306654
- */
+
 package paragraphtosentence;
 import java.io.BufferedReader;
 import java.io.File;
