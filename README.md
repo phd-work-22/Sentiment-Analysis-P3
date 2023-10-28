@@ -1,15 +1,18 @@
-# Title: Charaterising developer sentiment in software components: a case study of Gentoo
+# Title: Charaterizing developer sentiment in software components: a case study of Gentoo
 
-Following is the steps of conducting our work based on the paper titled: Charaterising developer sentiment in software components.
+Following is the steps of conducting our work based on the paper titled: Charaterizing developer sentiment in software components.
 
 1. Extracting Mailing Lists and Commits data
    
 1.1. Extracting Mailing Lists of Gentoo.
-The mailing lists retrieved from the archives of the Gentoo mailing lists shared in the following link: https://archives.gentoo.org/gentoo-dev/
+The mailing list retrieved from the archives of the Gentoo mailing lists shared in the following link: https://archives.gentoo.org/gentoo-dev/
+The retrieved archives of the mailing list were kept in files.
 
 1.2. Extracting Gentoo (Bugzilla) Commits data
-The bugzilla report containing commits data retrieced from the repository in the following links: https://gitweb.gentoo.org/repo/gentoo/historical.git/; https://github.com/gentoo/gentoo.git
+The bugzilla report containing commits data retrieved from the repository in the following links: https://gitweb.gentoo.org/repo/gentoo/historical.git/; https://github.com/gentoo/gentoo.git
+The retrieved archives of the commits were kept in files.
 
+All of the files were converted into databases for further analysis.
 
 2. Preprocessing the data
 
