@@ -25,12 +25,16 @@ In this phase, we shortened the name of the component file path for each commit 
 3. Identifying sentiment in the mailing list
 We employed Sentistrength-SE to label each sentence of each message in the mailing list. The available SentiStrength can be found via this link: https://drive.google.com/drive/folders/1fyiqgrh_mP28uZJNIzAoMsAX3DWMa3RO
 
-5. Aggregating, linking, and visualising data for analysis
+4. Aggregating, linking, and visualising data for analysis
+   
 4.1. Aggregating datasets of mailing data and commits
    We aggregated the number of positive and negative scores of all messages by year.
    We aggregated the number of commits done by each developers by time(month, year), author.
+   All the aggregations were done by using SQL.
 
 4.2 Linking and visualising data
+Any neccessary linkage between two datasets (mailing list and commits) for further analysis were done in SQl and R.
+All visualization in the study was done in R.
 
 All datasets are available by request.
 
