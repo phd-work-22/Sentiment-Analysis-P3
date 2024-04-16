@@ -12,7 +12,7 @@ The retrieved archives of the mailing list were kept in files.
 The bugzilla report containing commits data retrieved from the repository in the following links: https://gitweb.gentoo.org/repo/gentoo/historical.git/; https://github.com/gentoo/gentoo.git
 The retrieved archives of the commits were kept in files.
 
-All of the files were converted into databases for further analysis.
+All of the files were converted into tables for further analysis.
 
 2. Preprocessing the data
 
