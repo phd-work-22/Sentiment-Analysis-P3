@@ -40,10 +40,11 @@ Following is the steps of conducting our work based on the paper titled: Charate
    All the aggregations were done by using SQL.
 
    4.2 Linking and visualising data
-   Any neccessary linkage between two datasets (mailing list and commits) for further analysis were done in SQl and R.
+   
+   Any neccessary linkage between two datasets (mailing list and commits) for further analysis were done in SQL and R.
    All visualization in the study was done in R.
 
-5. Manipulating tables to answer Research Questions
+6. Manipulating tables to answer Research Questions
    5.1. RQ1 -- The extent of negative and positive emotions in the written communication in Gentoo, we aggregated the number of positive and negative scores labelled by the Sentistrength-
    SE throughout the period (between 2001 and 2023).
 
