@@ -5,6 +5,7 @@ Following is the steps of conducting our work based on the paper titled: Charate
 1. Extracting Mailing Lists and Commits data
    
    1.1. Extracting Mailing Lists of Gentoo.
+   
    The mailing list retrieved from the archives of the Gentoo mailing lists shared in the following link: https://archives.gentoo.org/gentoo-dev/
    The retrieved archives of the mailing list were kept in files.
    Source code: GentooMonthlyMessageScrapper.py
@@ -12,6 +13,7 @@ Following is the steps of conducting our work based on the paper titled: Charate
    We merge all of the files into a file called 'gentoo_mlists_all.csv' with a source code named: merging_all_data.R. 
 
    1.2. Extracting Gentoo Commits data
+   
    The commits data were retrieved from the repository in the following links: https://gitweb.gentoo.org/repo/gentoo/historical.git/;
    https://github.com/gentoo/gentoo.git
    The retrieved archives of the commits were kept in files.
@@ -19,7 +21,7 @@ Following is the steps of conducting our work based on the paper titled: Charate
    
    All of the files were converted into tables for further analysis.
 
-2. Preprocessing the data
+3. Preprocessing the data
 
    2.1 Cleaning the emails
    In this phase, we cleaned up the content of the message body. We removed lines prefixed by the character '\textgreater’, URLs, name(s) or signatures, greetings (i.e. "Kind
@@ -27,12 +29,13 @@ Following is the steps of conducting our work based on the paper titled: Charate
    Source code: NormalisedGentooMListsReport.java. The output of the file is gentoo_mlists_normalised_koment.txt.
  
 
-3. Identifying sentiment in the mailing list
+4. Identifying sentiment in the mailing list
+   
    Using the java-based tool Sentistrength-SE, we did the labelling or giving scores to each sentence. Source code: ExecuteSentistrengthSE.java; output: results of sentimen
    analysis gentoo mlists.txt. File included is sentistrength.sh.
    In order to giving the scores to each sentence, we have to compile and run the ExecuteSentistrengthSE.java together with file 'gentoo_mlists_normalised_komen.txt' as its input      and its ouput as 'results of sentimen analysis gentoo mlists.txt'
 
-4. Aggregating, linking, and visualising data for analysis
+5. Aggregating, linking, and visualising data for analysis
    
    4.1. Aggregating datasets of mailing data and commits
    We aggregated the number of positive and negative scores of all messages by year.
@@ -45,6 +48,7 @@ Following is the steps of conducting our work based on the paper titled: Charate
    All visualization in the study was done in R.
 
 6. Manipulating tables to answer Research Questions
+   
    5.1. RQ1 -- The extent of negative and positive emotions in the written communication in Gentoo, we aggregated the number of positive and negative scores labelled by the Sentistrength-
    SE throughout the period (between 2001 and 2023).
 
