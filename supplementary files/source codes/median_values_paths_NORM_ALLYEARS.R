@@ -1,4 +1,4 @@
-setwd("/Volumes/Data/PhD/Gentoo/workdir/tables")
+setwd("<file_path>")
 # This codes dealth with steps of finding out the median values of
 # both sentiment polarities and DWNS/DWPS
 # the normalised_data-new.csv used here are the file that has been
@@ -19,7 +19,7 @@ median_negs <- aggregate(sdata_all_norm$norm,
                          FUN = median, na.rm = TRUE)
 colnames(median_negs) <- c('path', 'median_normalised_n')
 write.csv(median_negs, 
-          "/Volumes/Data/PhD/Gentoo/CSV Files/median/2019-2023_Median_values_PATH.csv", 
+          "<file_path>2019-2023_Median_values_PATH.csv", 
           row.names=TRUE)
 ################################################################################
 # calculating the median values of DWNS
@@ -31,7 +31,7 @@ median_dwns <- aggregate(sdata_all_norm_dwns$norm,
                          FUN = median, na.rm = TRUE)
 colnames(median_dwns) <- c('path', 'median_normalised_n')
 write.csv(median_dwns, 
-          "/Volumes/Data/PhD/Gentoo/CSV Files/median/2019-2023_Median_DWNS_values_PATH.csv", 
+          "<file_path>2019-2023_Median_DWNS_values_PATH.csv", 
           row.names=TRUE)
 ################################################################################
 #processing the positive datasets
@@ -44,7 +44,7 @@ median_pos <- aggregate(sdata_all_norm_pos$norm,
                         FUN = median, na.rm = TRUE)
 colnames(median_pos) <- c('path', 'median_normalised_n')
 write.csv(median_pos, 
-          "/Volumes/Data/PhD/Gentoo/CSV Files/median/2019-2023_Median_POSvalues_PATH.csv", 
+          "<file_path>2019-2023_Median_POSvalues_PATH.csv", 
           row.names=TRUE)
 ################################################################################
 sdata_all_norm_dwps <- subset(df_devops, between(year, 2019, 2023)) %>%
@@ -55,7 +55,7 @@ median_dwps <- aggregate(sdata_all_norm_dwps$norm,
                          FUN = median, na.rm = TRUE)
 colnames(median_dwps) <- c('path', 'median_normalised_n')
 write.csv(median_dwps, 
-          "/Volumes/Data/PhD/Gentoo/CSV Files/median/2019-2023_Median_DWPS_values_PATH.csv", 
+          "<file_path>2019-2023_Median_DWPS_values_PATH.csv", 
           row.names=TRUE)
 
 
