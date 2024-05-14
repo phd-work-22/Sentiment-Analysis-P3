@@ -4,7 +4,7 @@ library(reshape2)
 library(ggtext)
 library(scales)
 
-setwd("/Volumes/Data/PhD/Gentoo/workdir/tables")
+setwd("<file_path>")
 messages_sent <- read.csv("#messages_yearly_2001_2023.csv",TRUE,";")
 
 negative_sent <- read.csv("messages_containing_Negsentences-CLEANED.csv", TRUE, sep=";")
