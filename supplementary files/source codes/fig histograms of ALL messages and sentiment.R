@@ -5,13 +5,10 @@ library(ggtext)
 library(scales)
 
 setwd("/Volumes/Data/PhD/Gentoo/workdir/tables")
-#messages_sent <- read.csv("list_number_messages_sent_by_sender_yearly2.csv",FALSE,";")
 messages_sent <- read.csv("#messages_yearly_2001_2023.csv",TRUE,";")
 
 negative_sent <- read.csv("messages_containing_Negsentences-CLEANED.csv", TRUE, sep=";")
 positive_sent <- read.csv("list_messages_containing_strongPosSentences_2024-CLEANED.csv", TRUE, sep=";")
-
-#negative_sent <- read.csv("messages_containing_Negsentences-2.csv", TRUE, sep=";")
 
 messages_sent <- as.data.frame(messages_sent)
 negative_sent <- as.data.frame(negative_sent)
