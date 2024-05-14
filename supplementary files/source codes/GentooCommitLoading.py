@@ -7,10 +7,10 @@ from alphabet_detector import AlphabetDetector
 ad = AlphabetDetector()
 
 connection = pymysql.connect(host='localhost',
-                             user = 'admin',
+                             user = 'your_username',
                              port = 3306,
-                             password = 'Admin@123',
-                             db='mlstats_gentoo',
+                             password = 'your_password',
+                             db='your_database_name',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 try:
