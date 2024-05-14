@@ -1,14 +1,11 @@
 library(dplyr)
 library(ggplot2)
 
-#setwd("/Users/tientulili/Documents/My Doctorate FILES/2 PhD Objective 2/Replicate Study/threads")
-#mailists <- read.csv("2022-05-1m.csv",TRUE, ",")
-
-setwd("/Users/tientulili/Documents/gentoo_mailingLists/completed mailing lists reports/")
+setwd("<file_path>")
 mailists <- read.csv("dumpFile.csv",TRUE, ",")
 
 df <- as.data.frame(mailists)
-for(year in 2001:2022) {
+for(year in 2001:2023) {
   for(month in 1:12) {
     for(page in 1:10) {
       if (month < 10) {
@@ -41,7 +38,7 @@ for(year in 2001:2022) {
   } 
 }
 
-write.csv(df,"/Users/tientulili/Documents/gentoo_mlists_all.csv", row.names = FALSE)
+write.csv(df,"<file_path>gentoo_mlists_all.csv", row.names = FALSE)
 df
 
 
