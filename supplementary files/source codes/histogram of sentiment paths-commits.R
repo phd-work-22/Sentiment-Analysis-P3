@@ -6,7 +6,7 @@ library(dplyr)
 library(ggpubr)
 library(scales)
 
-setwd("/Volumes/Data/PhD/Gentoo/workdir/tables")
+setwd("<file_path>")
 data <- read.csv("data-all-sentiments-commits2.csv",TRUE,';')
 s_data <- 
   subset(data, select = c('path', 'year', 'n_neg_messages', 'n_pos_messages'))
