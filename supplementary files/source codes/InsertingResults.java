@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author p306654
+ * @author Tien Rahayu Tulili
  */
 public class InsertingResults {
     public static void main(String[] args) throws ClassNotFoundException, SQLException, IOException,
