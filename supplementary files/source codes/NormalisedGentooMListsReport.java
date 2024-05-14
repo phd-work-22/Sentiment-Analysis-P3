@@ -30,11 +30,11 @@ import java.util.regex.Pattern;
 public class NormalisedGentooMListsReport {
         public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            File normFiles = new File( "/workdir/files/gentoo_mlists_normalised_koment.txt");
+            File normFiles = new File( "<your_path>gentoo_mlists_normalised_koment.txt");
             PrintWriter printWriter = new PrintWriter(normFiles);
             
             try (Connection con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/mlstats_gentoo","admin","Admin@123")) {
+                    "jdbc:mysql://localhost:3306/<database_name>","<username>","<password>")) {
                 
                 Statement stmt=con.createStatement();
                 ResultSet rs=stmt.executeQuery(
