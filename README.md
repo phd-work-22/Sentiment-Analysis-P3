@@ -1,6 +1,6 @@
 # Title: Investigating Developer Sentiments in Software Components: An Exploratory Case Study of Gentoo
 
-Following is the steps of conducting our work based on the paper titled: Charaterizing developer sentiment in software components.
+Following is the steps of conducting our work based on the paper titled: Investigating Developer Sentiments in Software Components: An Exploratory Case Study of Gentoo
 
 1. Extracting Mailing Lists and Commits data
    
@@ -37,43 +37,35 @@ Following is the steps of conducting our work based on the paper titled: Charate
 
 5. Aggregating, linking, and visualising data for analysis
    
-   4.1. Aggregating datasets of mailing data and commits
-   We aggregated the number of positive and negative scores of all messages by year.
-   We aggregated the number of commits done by each developers by time(month, year), author.
-   All the aggregations were done by using SQL.
+   5.1. RQ1
+   - We aggregated the number of positive and negative scores of all messages by year.
+   - We aggregated the number of postive and negative sentences written by DWNs, DWPs, and Active developers.
+        - We calculated the proportion between posisitve or negative sentences and the total messages written and normalized the proportion with a log scale.
+   - We aggregated the number of commits done and the total contributions (in months) made by each developer.
+       - We calculated the proportion between the number of the commits done the contributions and normalized with a log scale.
+   - We visualized the aggregations into a histogram (Figure 4) and boxplots (Figure 5)
+  
+   5.2 RQ2
+   - We linked the sentiment and commit dataset by timestamp (year, month, and day)
+     - Using the linked data, we aggregated the number of negative and positive messages in each path(category) yearly
+     - Similarly, we aggregated the number of sentiments messages at the category/path grain level.
+     - We calculated the substraction between the number of positive and negative messages in each path/category and path/category grain throughout the years to determine how high
+       the sentiment is. We normalized the results of the substraction and visualized the normalized results into heatmaps (Figure 6 and 7)
 
-   4.2 Linking and visualising data
-   
-   Any neccessary linkage between two datasets (mailing list and commits) for further analysis were done in SQL and R.
-   All visualization in the study was done in R.
+   5.3 RQ3
+   - We linked DWNs and DWPs dataset with commit dataset by name, year, month, and day.
+     - We aggregated the number of DWNs and DWPs working on each path/category and path/category grain.
+       - We calculated the substraction between the number of DWNs and DWPs in each path/category and path/category grain throughout the years. We normalized all those the substraction values in each path/category and grain with z-score.
+   - Similarly, regarding the distribution of the sentiments on the paths and path grains, we conducted the linking method as we did in the answer to RQ2.
+   - We calculated the media values of all normalized values distributed in paths and grains between 2001 and 2023.
+     - We employed those median values and applied descriptive statistics (e.g. Q1 and Q3) to determine three categories (High, Medium, and Low). Please see our paper for more details.
+  - We visualized the distribution of the affected grains (Figure 8) and paths (Figure 9)
 
-6. Manipulating tables to answer Research Questions
-   
-   5.1. RQ1 -- The extent of negative and positive emotions in the written communication in Gentoo, we aggregated the number of positive and negative scores labelled by the Sentistrength-
-   SE throughout the period (between 2001 and 2023).
+  - We sampled top ten positive and negative paths and used the number of commits done in each path/category.
+  - We visualized the distribution of the commits in each path.
 
-   Figure 1. (Total number of messages containing positive sentences and messages containing negative messages.
-   Source code: 'fig_histograms_of_all_messages_and_sentiment.R'.
-
-   Figure 2. Boxplots of the top 10 of active developers, DWNs, DWPs, regarding a relative numbers of commits done and of positive and negative sentences written.
-   Source code: boxplots-negpos-4plots.R
-
-   5.2. RQ2 -- The extent of negative and positive communication in Gentoo components
-   Figure 3. Heatmaps of number negative and positive messages containing negative/positive sentences by grains with standard normalisasation (z-score) applied yearly.
-   Source code: hmaps-sentiments-grains-standard-yearly.R
-
-   Figure 4. Heatmaps of number negative and positive messages containing negative/positive sentences by paths with standard normalisation (z-score) applied yearly.
-   Source code: hmaps-sentiment-standardnorm.R
-
-   5.3. RQ3 -- The impact of emotion on the Gentoo's developers activity
-   We calculated the inter-qurtile values (Q1 an Q3) of the z-scores of the differences between DWPs and DWNs and also the differences between positive and negative messages across
-   the Gentoo evolution in each grain and path.
-   Source codes: median_values_grains_norm_allyears.R and median_values_paths_norm_allyears.R.
-
-   Figure 5. Bar graph of the number of commits of top ten negative paths and top ten positive paths.
-   Source code: histogram of sentiment paths-commits.R.
-
-All datasets are available by request.
+   The aggregations and visualization were done in SQL and R.
+   All datasets and source codes are available by request.
 
 
 
