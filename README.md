@@ -21,7 +21,7 @@ Following is the steps of conducting our work based on the paper titled: Investi
    
    All of the files were converted into tables for further analysis.
 
-3. Preprocessing the data
+2. Preprocessing the data
 
    2.1 Cleaning the emails
    In this phase, we cleaned up the content of the message body. We removed lines prefixed by the character '\textgreater’, URLs, name(s) or signatures, greetings (i.e. "Kind
@@ -29,12 +29,18 @@ Following is the steps of conducting our work based on the paper titled: Investi
    Source code: NormalisedGentooMListsReport.java. The output of the file is gentoo_mlists_normalised_koment.txt.
  
 
-4. Identifying sentiment in the mailing list
+3. Identifying sentiment in the mailing list
    
    Using the java-based tool Sentistrength-SE, we did the labelling or giving scores to each sentence. Source code: ExecuteSentistrengthSE.java; output: results of sentimen
    analysis gentoo mlists.txt. File included is sentistrength.sh.
    In order to giving the scores to each sentence, we have to compile and run the ExecuteSentistrengthSE.java together with file 'gentoo_mlists_normalised_komen.txt' as its input      and its ouput as 'results of sentimen analysis gentoo mlists.txt'
-
+   
+4. Identifying Developer writing negative sentences (DWNs) and Developer writing positive sentences (DWPs)
+   - We ordered from maximum to minimum the values of negative sentences written by developers and subsequently obtained the top 5% of the values of the pool. We found the minimum value of the negative sentences was 17.
+     - We cross-checked the DWNs against the official Gentoo's developer dataset and ended up with 26 disctinct developers. 
+   -  We applied the similar approach to the dataset of the positive sentences written by developers. We found the minimum value of the positive sentences written was 11.
+     - We cross-checked the DWPs against the official Gentoo's developer dataset and ended up with 25 developers.
+     
 5. Aggregating, linking, and visualising data for analysis
    
    5.1. RQ1
