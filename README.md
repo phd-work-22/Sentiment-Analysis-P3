@@ -1,4 +1,4 @@
-# Title: Charaterising developer sentiment in software components: a case study of Gentoo
+# Title: Investigating Developer Sentiments in Software Components: An Exploratory Case Study of Gentoo
 
 Following is the steps of conducting our work based on the paper titled: Charaterizing developer sentiment in software components.
 
